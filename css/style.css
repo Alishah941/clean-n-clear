@@ -1,3 +1,164 @@
-body{
-background:red;
+/* GLOBAL */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+h1, h2, h3 {
+  color: #225899;
+}
+
+p {
+  color: #666;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #74ccf4;
+  padding: 15px 30px;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #f1c111;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.nav-link:hover {
+  color: #f1c111;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+
+  padding: 120px 0;
+  background: linear-gradient(135deg, #74ccf4 60%, white 40%);
+}
+
+.hero h1 {
+
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero p {
+
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+
+/* BUTTON */
+
+.custom-btn {
+
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  background: #225899;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.custom-btn:hover {
+
+  background: #f1c111;
+  color: black;
+}
+
+
+/* SERVICES */
+
+.section-padding {
+
+  padding: 80px 0;
+}
+
+.column {
+
+  float: left;
+  width: 25%;
+  padding: 15px;
+}
+
+.row::after {
+
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main {
+
+  background: white;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.main:hover {
+
+  transform: scale(1.05);
+  background: linear-gradient(135deg,#007ea7,#80ced7);
+  color: white;
+}
+
+.main:hover h3,
+.main:hover p {
+
+  color: white;
+}
+
+
+/* CONTACT */
+
+#contact {
+
+  background: #f0f8ff;
+  text-align: center;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+
+  background: #74ccf4;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width:768px){
+
+.column {
+
+width:100%;
+}
+
+.hero h1 {
+
+font-size:32px;
+}
+
 }

@@ -1,4 +1,4 @@
-/* NAVBAR CLOSE ON CLICK */
+a/* NAVBAR CLOSE ON CLICK */
 
 $(document).ready(function(){
 

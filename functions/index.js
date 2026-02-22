@@ -1,112 +1,52 @@
-a/* NAVBAR CLOSE ON CLICK */
 
-$(document).ready(function(){
+  $(function () {
 
-  $(".nav-link").click(function(){
-
-    $(".navbar-collapse").collapse("hide");
-
-  });
-
-});
+    // MENU
+    $('.nav-link').on('click',function(){
+      $(".navbar-collapse").collapse('hide');
+    });
 
 
-/* SMOOTH SCROLL */
-
-$(document).ready(function(){
-
-  $(".nav-link").click(function(e){
-
-    if(this.hash !== ""){
-
-      e.preventDefault();
-
-      var hash = this.hash;
-
-      $("html, body").animate({
-
-        scrollTop: $(hash).offset().top
-
-      }, 800);
-
-    }
-
-  });
-
-});
+    // AOS ANIMATION
+    AOS.init({
+      disable: 'mobile',
+      duration: 800,
+      anchorPlacement: 'center-bottom'
+    });
 
 
-/* SIMPLE HERO ANIMATION */
-
-$(document).ready(function(){
-
-  $(".hero h1").hide().fadeIn(1200);
-
-  $(".hero p").hide().fadeIn(1800);
-
-  $(".custom-btn").hide().fadeIn(2200);
-
-});
-
-
-/* SERVICE HOVER EFFECT EXTRA */
-
-$(document).ready(function(){
-
-  $(".main").hover(
-
-    function(){
-
-      $(this).css("transform","scale(1.05)");
-
-    },
-
-    function(){
-
-      $(this).css("transform","scale(1)");
-
-    }
-
-  );
-
-});
+    // SMOOTH SCROLL
+    $(function() {
+      $('.nav-link').on('click', function(event) {
+        var $anchor = $(this);
+          $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 0
+          }, 1000);
+            event.preventDefault();
+      });
+    });  
 
 
-/* SCROLL TO TOP BUTTON */
-
-var mybutton = document.getElementById("myBtn");
-
-window.onscroll = function() {
-
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-
-    if(mybutton){
-
-      mybutton.style.display = "block";
-
-    }
-
-  } else {
-
-    if(mybutton){
-
-      mybutton.style.display = "none";
-
-    }
-
-  }
-
-};
-
-
-function topFunction() {
-
-  window.scrollTo({
-
-    top: 0,
-
-    behavior: "smooth"
+    // PROJECT SLIDE
+    $('#project-slide').owlCarousel({
+      loop: true,
+      center: true,
+      autoplayHoverPause: false,
+      autoplay: true,
+      margin: 30,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+          },
+          768:{
+              items:2,
+          }
+      }
+    });
 
   });
 
-}
+
+    
+

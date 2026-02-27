@@ -1,5 +1,4 @@
-
-  $(function () {
+$(function () {
 
     // MENU
     $('.nav-link').on('click',function(){
@@ -47,6 +46,4 @@
 
   });
 
-
-    
 
